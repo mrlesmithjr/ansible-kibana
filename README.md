@@ -75,10 +75,6 @@ kibana_plugins_dir: '/usr/share/kibana/plugins/'
 # Define Kibana listen port
 kibana_port: '5601'
 
-# Defines if legacy install should be removed
-# This will cleanup previous non package installs that used this role previously
-kibana_remove_legacy_install: true
-
 # Kibana x-pack plugin settings
 kibana_xpack_plugin_installed: false
 kibana_xpack_graph_enabled: true
