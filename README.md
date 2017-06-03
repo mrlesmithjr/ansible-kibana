@@ -28,7 +28,7 @@ kibana_debian_repo_info:
 kibana_default_app: 'discover'
 
 # Defines the port of the kibana_elasticsearch_url host
-kibana_elasticsearch_port: '9200'
+kibana_elasticsearch_port: 9200
 
 # When this setting's value is true Kibana uses the hostname specified in the server.host
 # setting. When the value of this setting is false, Kibana uses the hostname of the host
@@ -47,7 +47,7 @@ kibana_fix_babelcache_perms: false
 # Defines Kibana host
 # should remain as 0.0.0.0 unless other requirements are required
 # research before changing
-kibana_host: '0.0.0.0'
+kibana_host: 0.0.0.0
 
 # Kibana uses an index in Elasticsearch to store saved searches, visualizations and
 # dashboards. Kibana creates a new index if the index doesn't already exist.
@@ -59,10 +59,10 @@ kibana_manage_plugins: true
 kibana_major_version: '5.x'
 
 # The maximum payload size in bytes for incoming server requests.
-kibana_maxpayloadbytes: '1048576'
+kibana_maxpayloadbytes: 1048576
 
 # Define Kibana Minor Release
-kibana_minor_version: '5.2.2'
+kibana_minor_version: 5.4.1
 
 # Define Kibana plugins
 kibana_plugins:
@@ -73,7 +73,7 @@ kibana_plugins_bin: '{{ kibana_bin_dir }}/kibana-plugin'
 kibana_plugins_dir: '/usr/share/kibana/plugins/'
 
 # Define Kibana listen port
-kibana_port: '5601'
+kibana_port: 5601
 
 # Kibana x-pack plugin settings
 kibana_xpack_plugin_installed: false
