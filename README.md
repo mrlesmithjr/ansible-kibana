@@ -1,17 +1,14 @@
-Role Name
-=========
+# Role Name
 
 An [Ansible] role to install/configure [Kibana]
 
-Requirements
-------------
+## Requirements
 
-- A functional [Elasticsearch] host/cluster
+-   A functional [Elasticsearch] host/cluster
 
-Role Variables
---------------
+## Role Variables
 
-```
+```yaml
 ---
 # defaults file for ansible-kibana
 
@@ -62,7 +59,7 @@ kibana_major_version: '5.x'
 kibana_maxpayloadbytes: 1048576
 
 # Define Kibana Minor Release
-kibana_minor_version: 5.4.1
+kibana_minor_version: 5.4.3
 
 # Define Kibana plugins
 kibana_plugins:
@@ -87,29 +84,28 @@ kibana_xpack_security_enabled: false
 kibana_xpack_watcher_enabled: true
 ```
 
-Dependencies
-------------
+## Dependencies
 
 None
 
-Example Playbook
-----------------
+## Example Playbook
 
-
-License
--------
+## License
 
 BSD
 
-Author Information
-------------------
+## Author Information
 
 Larry Smith Jr.
-- @mrlesmithjr
-- http://everythingshouldbevirtual.com
-- mrlesmithjr [at] gmail.com
 
-[@mrlesmithjr]: <https://www.twitter.com/mrlesmithjr>
-[Ansible]: <https://www.ansible.com>
-[Elasticsearch]: <https://www.elastic.co/products/elasticsearch>
-[Kibana]: <https://www.elastic.co/products/kibana>
+-   @mrlesmithjr
+-   <http://everythingshouldbevirtual.com>
+-   mrlesmithjr [at] gmail.com
+
+[@mrlesmithjr]: https://www.twitter.com/mrlesmithjr
+
+[ansible]: https://www.ansible.com
+
+[elasticsearch]: https://www.elastic.co/products/elasticsearch
+
+[kibana]: https://www.elastic.co/products/kibana
