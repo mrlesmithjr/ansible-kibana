@@ -1,10 +1,24 @@
-# Role Name
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-An [Ansible] role to install/configure [Kibana]
+- [ansible-kibana](#ansible-kibana)
+  - [Requirements](#requirements)
+  - [Role Variables](#role-variables)
+  - [Dependencies](#dependencies)
+  - [Example Playbook](#example-playbook)
+  - [License](#license)
+  - [Author Information](#author-information)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+# ansible-kibana
+
+An [Ansible](https://www.ansible.com) role to install/configure [Kibana](https://www.elastic.co/products/kibana)
 
 ## Requirements
 
--   A functional [Elasticsearch] host/cluster
+-   A functional [Elasticsearch](https://www.elastic.co/products/elasticsearch) host/cluster
 
 ## Role Variables
 
@@ -90,22 +104,23 @@ None
 
 ## Example Playbook
 
+```yaml
+---
+- hosts: all
+  vars:
+  roles:
+    - role: ansible-kibana
+  tasks:
+```
+
 ## License
 
-BSD
+MIT
 
 ## Author Information
 
 Larry Smith Jr.
 
--   @mrlesmithjr
--   <http://everythingshouldbevirtual.com>
+-   [@mrlesmithjr](https://www.twitter.com/mrlesmithjr)
+-   [EverythingShouldBeVirtual](http://everythingshouldbevirtual.com)
 -   mrlesmithjr [at] gmail.com
-
-[@mrlesmithjr]: https://www.twitter.com/mrlesmithjr
-
-[ansible]: https://www.ansible.com
-
-[elasticsearch]: https://www.elastic.co/products/elasticsearch
-
-[kibana]: https://www.elastic.co/products/kibana
