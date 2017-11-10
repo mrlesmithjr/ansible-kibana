@@ -48,7 +48,7 @@ kibana_major_version: '5.x'
 kibana_maxpayloadbytes: 1048576
 
 # Define Kibana Minor Release
-kibana_minor_version: 5.4.3
+kibana_minor_version: 5.6.4
 
 # Define Kibana plugins
 kibana_plugins:
