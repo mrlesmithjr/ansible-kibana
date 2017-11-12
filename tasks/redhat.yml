@@ -1,7 +1,26 @@
 ---
-- name: redhat | Configuring Kibana Service
-  template:
-    src: "etc/systemd/system/kibana.service.j2"
-    dest: "/etc/systemd/system/kibana.service"
+- name: redhat | Adding Kibana Repo Key
+  rpm_key:
+    key: "{{ kibana_repo_key }}"
+    state: present
   become: true
-  notify: "restart kibana"
+
+- name: redhat | Adding Kibana Repo
+  template:
+    src: kibana.repo.j2
+    dest: /etc/yum.repos.d/kibana.repo
+  become: true
+
+- name: redhat | Installing Kibana
+  dnf:
+    name: kibana
+    state: present
+  become: true
+  when: ansible_distribution == "Fedora"
+
+- name: redhat | Installing Kibana
+  yum:
+    name: kibana
+    state: present
+  become: true
+  when: ansible_distribution != "Fedora"
