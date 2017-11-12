@@ -1,0 +1,8 @@
+[kibana-{{ kibana_major_version }}]
+name=Elastic repository for {{ kibana_major_version }} packages
+baseurl={{ kibana_redhat_repo_url }}
+gpgcheck=1
+gpgkey={{ kibana_repo_key }}
+enabled=1
+autorefresh=1
+type=rpm-md

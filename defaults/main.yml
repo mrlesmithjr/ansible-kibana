@@ -7,8 +7,8 @@ kibana_bin_dir: '/usr/share/kibana/bin'
 kibana_config: true
 kibana_dir: '/etc/kibana'
 kibana_debian_repo_info:
-  key: 'https://artifacts.elastic.co/GPG-KEY-elasticsearch'
-  repo: 'deb https://artifacts.elastic.co/packages/{{ kibana_major_version }}/apt stable main'
+  key: "{{ kibana_repo_key }}"
+  repo: "deb https://artifacts.elastic.co/packages/{{ kibana_major_version }}/apt stable main"
 
 # The default application to load.
 kibana_default_app: 'discover'
@@ -60,6 +60,11 @@ kibana_plugins_dir: '/usr/share/kibana/plugins/'
 
 # Define Kibana listen port
 kibana_port: 5601
+
+
+kibana_redhat_repo_url: "https://artifacts.elastic.co/packages/{{ kibana_major_version }}/yum"
+
+kibana_repo_key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
 
 # Kibana x-pack plugin settings
 kibana_xpack_plugin_installed: false
