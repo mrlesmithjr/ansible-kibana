@@ -1,3 +1,27 @@
+commit 6751c59e39cd1e82067f3cf28cdf9a8b698dfc69
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jun 18 19:07:13 2020 -0400
+
+    Cleaned up formatting, etc.
+
+commit d84e71bcde5ea5dff3e3952d9b99d61d4763d99e
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jun 18 19:06:46 2020 -0400
+
+    Updated Kibana to version 7.8.0
+
+commit ae6d9699dbe4203de93c008de34bf9307da374ef
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jun 18 19:05:31 2020 -0400
+
+    Compiled Python requirements
+
+commit eaa7840df34b96fc40aaf02c28c8b8045bd0fa57
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jun 18 18:39:33 2020 -0400
+
+    Added new files, etc. based on Cookiecutter template
+
 commit 85812b2e64b31f1fcd3ddbfe0d804cdca90161c7
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jun 18 18:39:16 2020 -0400
