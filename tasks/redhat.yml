@@ -1,7 +1,12 @@
 ---
-- name: redhat | Adding Kibana Repo Key
+- name: redhat | Copying Elasticsearch GPG Key
+  copy:
+    src: GPG-KEY-elasticsearch
+    dest: /tmp/GPG-KEY-elasticsearch
+
+- name: redhat | Adding Elasticsearch GPG Key
   rpm_key:
-    key: "{{ kibana_repo_key }}"
+    key: /tmp/GPG-KEY-elasticsearch
     state: present
   become: true
 
