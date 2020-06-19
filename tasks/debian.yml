@@ -2,11 +2,11 @@
 # Installing some Kibana pre-reqs
 - name: debian | Installing Pre-Reqs
   apt:
-    name: "{{ item }}"
+    name:
+      - apt-transport-https
+      - gnupg
     state: present
   become: true
-  with_items:
-    - apt-transport-https
 
 # Adding Elastic Repo Key
 - name: debian | Adding Elasticsearch Repo Key

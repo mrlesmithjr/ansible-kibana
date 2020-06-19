@@ -7,7 +7,7 @@
   when: ansible_os_family == "RedHat"
 
 - include_tasks: config_kibana.yml
-  when: kibana['config']
+  when: kibana['config']|bool
 
 - include_tasks: plugins.yml
 

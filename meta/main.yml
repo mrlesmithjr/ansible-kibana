@@ -1,10 +1,9 @@
+---
 galaxy_info:
   author: Larry Smith Jr.
-  description: An [Ansible] role to install/configure [Kibana]
-
-  license: license (MIT)
-
-  min_ansible_version: 1.2
+  description: Ansible role to install/configure Kibana
+  license: MIT
+  min_ansible_version: 2.8
 
   platforms:
     - name: EL
@@ -12,6 +11,7 @@ galaxy_info:
         - 7
     - name: Ubuntu
       versions:
+        - bionic
         - precise
         - trusty
         - utopic
@@ -21,5 +21,4 @@ galaxy_info:
   galaxy_tags:
     - elasticsearch
     - web
-
 dependencies: []

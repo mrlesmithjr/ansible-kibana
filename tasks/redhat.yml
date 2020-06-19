@@ -12,15 +12,7 @@
   become: true
 
 - name: redhat | Installing Kibana
-  dnf:
+  package:
     name: kibana
     state: present
   become: true
-  when: ansible_distribution == "Fedora"
-
-- name: redhat | Installing Kibana
-  yum:
-    name: kibana
-    state: present
-  become: true
-  when: ansible_distribution != "Fedora"
