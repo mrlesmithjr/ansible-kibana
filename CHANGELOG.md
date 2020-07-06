@@ -1,3 +1,32 @@
+commit 6c179c18e45048e51b96b355ba1268886da862a8
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sat Jun 20 18:50:05 2020 -0400
+
+    Renamed config_kibana task to config
+
+commit 9ecc2e018c5b1171499809820c243aeb35f4ca97
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Sat Jun 20 18:06:50 2020 -0400
+
+    Cleaned up default vars
+    
+    - Cleaned up formatting
+    - Cleaned up various generally unused vars that were commented out
+
+commit bbe0f7bce2e736b4a6b7cb24db0cf671d83259df
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Fri Jun 19 10:10:23 2020 -0400
+
+    Fixing BS GPG Key Issue
+    
+    https://discuss.elastic.co/t/official-apt-repository-451-unavailable-for-legal-reasons/232494
+
+commit 6d8aecd18d8963dd828fb55b77df76ddc52b4a43
+Author: Larry Smith Jr <mrlesmithjr@gmail.com>
+Date:   Thu Jun 18 19:08:02 2020 -0400
+
+    Fixed Debian pre-reqs
+
 commit 6751c59e39cd1e82067f3cf28cdf9a8b698dfc69
 Author: Larry Smith Jr <mrlesmithjr@gmail.com>
 Date:   Thu Jun 18 19:07:13 2020 -0400

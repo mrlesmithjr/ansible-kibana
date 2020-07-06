@@ -18,6 +18,6 @@
 
 - name: redhat | Installing Kibana
   package:
-    name: kibana
+    name: "{{ kibana_package }}"
     state: present
   become: true
