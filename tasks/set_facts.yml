@@ -1,0 +1,28 @@
+---
+- name: set_facts | Setting Kibana Package (Debian)
+  set_fact:
+    kibana_package: "{{ 'kibana=' + kibana['minor_version']|string }}"
+  when:
+    - ansible_os_family == "Debian"
+    - ('oss' not in kibana.major_version)
+
+- name: set_facts | Setting Kibana Package (Debian)
+  set_fact:
+    kibana_package: "{{ 'kibana-oss=' + kibana['minor_version']|string }}"
+  when:
+    - ansible_os_family == "Debian"
+    - ('oss' in kibana.major_version)
+
+- name: set_facts | Setting Kibana Package (RedHat)
+  set_fact:
+    kibana_package: "{{ 'kibana-' + kibana['minor_version'] }}"
+  when:
+    - ansible_os_family == "RedHat"
+    - ('oss' not in kibana.major_version)
+
+- name: set_facts | Setting Kibana Package (RedHat)
+  set_fact:
+    kibana_package: "{{ 'kibana-oss-' + kibana['minor_version'] }}"
+  when:
+    - ansible_os_family == "RedHat"
+    - ('oss' in kibana.major_version)

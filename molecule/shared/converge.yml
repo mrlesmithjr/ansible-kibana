@@ -1,6 +1,17 @@
 ---
 - name: Converge
   hosts: all
+  vars:
+    kibana:
+      config: false
+      config_dir: /etc/kibana
+      home_dir: /usr/share/kibana
+      major_version: oss-7.x
+      minor_version: 7.8.0
+      plugin_bin: /usr/share/kibana/kibana-plugin
+      plugin_dir: /usr/share/kibana/plugins
+      plugins: {}
+
   tasks:
     - name: Include ansible-kibana
       include_role:

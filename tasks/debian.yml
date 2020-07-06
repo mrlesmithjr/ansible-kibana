@@ -29,6 +29,6 @@
 # Installing Kibana version defined by kibana['minor_version']
 - name: debian | Installing Kibana {{ kibana['minor_version'] }}
   apt:
-    name: "kibana={{ kibana['minor_version'] }}"
+    name: "{{ kibana_package }}"
     state: present
   become: true
