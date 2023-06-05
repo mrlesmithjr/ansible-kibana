@@ -1,16 +1,22 @@
 ---
 # tasks file for ansible-kibana
-- include_tasks: set_facts.yml
+- name: Set facts
+  ansible.builtin.include_tasks: set_facts.yml
 
-- include_tasks: debian.yml
+- name: Debian specific tasks
+  ansible.builtin.include_tasks: debian.yml
   when: ansible_os_family == "Debian"
 
-- include_tasks: redhat.yml
+- name: RHEL specific tasks
+  ansible.builtin.include_tasks: redhat.yml
   when: ansible_os_family == "RedHat"
 
-- include_tasks: config.yml
+- name: Configure Kibana
+  ansible.builtin.include_tasks: config.yml
   when: kibana['config']|bool
 
-- include_tasks: plugins.yml
+- name: Manage Kibana plugins
+  ansible.builtin.include_tasks: plugins.yml
 
-- include_tasks: service.yml
+- name: Manage Kibana service
+  ansible.builtin.include_tasks: service.yml

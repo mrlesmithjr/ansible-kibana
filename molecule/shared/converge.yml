@@ -14,5 +14,5 @@
 
   tasks:
     - name: Include ansible-kibana
-      include_role:
+      ansible.builtin.include_role:
         name: ansible-kibana

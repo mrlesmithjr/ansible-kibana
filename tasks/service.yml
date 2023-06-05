@@ -1,6 +1,6 @@
 ---
 - name: service | Ensuring Kibana Service Is Started And Enabled On Boot
-  service:
+  ansible.builtin.service:
     name: kibana
     enabled: true
     state: started
