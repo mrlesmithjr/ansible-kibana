@@ -1,7 +1,7 @@
 ---
 # Installing some Kibana pre-reqs
 - name: debian | Installing Pre-Reqs
-  apt:
+  ansible.builtin.apt:
     name:
       - apt-transport-https
       - gnupg
@@ -9,26 +9,27 @@
   become: true
 
 - name: debian | Copying Elasticsearch GPG Key
-  copy:
+  ansible.builtin.copy:
     src: GPG-KEY-elasticsearch
     dest: /tmp/GPG-KEY-elasticsearch
+    mode: u=rw,g=r,o=r
 
 - name: debian | Adding Elasticsearch GPG Key
-  apt_key:
+  ansible.builtin.apt_key:
     file: /tmp/GPG-KEY-elasticsearch
     state: present
   become: true
 
 # Adding Kibana Repo
 - name: debian | Adding Kibana Repo
-  apt_repository:
+  ansible.builtin.apt_repository:
     repo: "deb {{ kibana_repo_url }}/packages/{{ kibana['major_version'] }}/apt stable main"
     state: present
   become: true
 
 # Installing Kibana version defined by kibana['minor_version']
 - name: debian | Installing Kibana {{ kibana['minor_version'] }}
-  apt:
+  ansible.builtin.apt:
     name: "{{ kibana_package }}"
     state: present
   become: true

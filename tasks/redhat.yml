@@ -1,23 +1,25 @@
 ---
 - name: redhat | Copying Elasticsearch GPG Key
-  copy:
+  ansible.builtin.copy:
     src: GPG-KEY-elasticsearch
     dest: /tmp/GPG-KEY-elasticsearch
+    mode: u=rw,g=r,o=r
 
 - name: redhat | Adding Elasticsearch GPG Key
-  rpm_key:
+  ansible.builtin.rpm_key:
     key: /tmp/GPG-KEY-elasticsearch
     state: present
   become: true
 
 - name: redhat | Adding Kibana Repo
-  template:
+  ansible.builtin.template:
     src: kibana.repo.j2
     dest: /etc/yum.repos.d/kibana.repo
+    mode: u=rw,g=r,o=r
   become: true
 
 - name: redhat | Installing Kibana
-  package:
+  ansible.builtin.package:
     name: "{{ kibana_package }}"
     state: present
   become: true
